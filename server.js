@@ -159,7 +159,7 @@ app.post('/api/commandes', async function (req, res) {
 mongoose.connect(process.env.MONGODB_URI)
   .then(function () {
     console.log('✅ Connecté à MongoDB');
-    app.listen(PORT, function () {
+    app.listen(PORT, '0.0.0.0', function () {
       console.log('✅ DZShop tourne sur http://localhost:' + PORT);
     });
   })
